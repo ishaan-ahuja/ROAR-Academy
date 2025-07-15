@@ -56,6 +56,7 @@ This course will require installation of the following reinforcement learning mo
 
 * gym simulator: <https://github.com/openai/gym>
 ~~~
-python -m pip install gym==0.17.3
-python -m pip install pyglet==1.5.11
+python -m pip install gym==0.26.2
+python -m pip install pyglet==1.5.27
+python -m pip install pygame==2.6.1
 ~~~
