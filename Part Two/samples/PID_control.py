@@ -115,7 +115,7 @@ class Vehicle2D(object):
 
 vehicle = Vehicle2D()
 vehicle.set(0, 1, 0)
-vehicle.set_steering_drift(10/180.*np.pi)
+vehicle.set_steering_drift(10/180.*np.pi) #10/180.*np.pi
 
 track_length = 1000
 targets = []; track_x = []; track_y = []
@@ -126,7 +126,7 @@ for i in range(300,600):
 for i in range(600,track_length):
     targets.append([i, 0]); track_x.append(i); track_y.append(0)
 
-K_p = 0.2; K_d = 3; K_i = 0.0005
+K_p = 0.2; K_d = 2; K_i = 0.000#5
 x_trajectory, y_trajectory = vehicle.run_PID(targets, K_p, K_d, K_i, track_length)  
 n = len(x_trajectory)
 

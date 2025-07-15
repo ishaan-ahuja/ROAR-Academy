@@ -20,9 +20,10 @@ try:
         if 'ETF' in line:           # if substring ETF exists in one line
             print(line)
             result_handle.write(line)
+    source_handle.close()
+    result_handle.close()
 except IOError:
     print('IO Error! Please check valid file names and paths')
     exit
-finally:
-    source_handle.close()
-    result_handle.close()
+# finally:
+
