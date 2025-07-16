@@ -80,5 +80,15 @@ for i in range(100):
     if estimate == testingY[i]:
         score = score  + 1
 
+# Draw decision boundary line
+weights = model.get_weights()[0].flatten()  # shape (2,)
+w1, w2 = weights[0], weights[1]
+# For sigmoid, decision boundary is w1*x1 + w2*x2 = 0
+x_vals = np.linspace(np.min(samples[:,0])-1, np.max(samples[:,0])+1, 100)
+if w2 != 0:
+    y_vals = -w1/w2 * x_vals
+    plt.plot(x_vals, y_vals, 'k--', label='Decision boundary')
+    plt.legend()
+
 plt.show()
-print('Test accuracy:', score/100)
+print('Test accuracy:', score)

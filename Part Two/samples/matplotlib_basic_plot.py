@@ -21,3 +21,4 @@ plt.ylim(-1, 1)
 plt.xlim(0,2*np.pi)
 plt.xticks(np.arange(0,2*np.pi,np.pi/4), ['0', 'pi/4', 'pi/2', '3pi/4', 'pi', '5pi/4', '3pi/2', '7pi/4'])
 plt.show()
+
