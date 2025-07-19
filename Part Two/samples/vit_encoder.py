@@ -270,10 +270,10 @@ if __name__ == "__main__":
     
     # Compile model
     model.compile(
-        optimizer=keras.optimizers.Adam(learning_rate=1e-3),
-        loss=keras.losses.SparseCategoricalCrossentropy(from_logits=True),
-        metrics=['accuracy']
-    )
+    optimizer=tf.keras.optimizers.legacy.Adam(learning_rate=1e-3),
+    loss=keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+    metrics=['accuracy']
+)
     
     print(model.summary())
     

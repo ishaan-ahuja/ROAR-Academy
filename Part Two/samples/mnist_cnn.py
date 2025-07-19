@@ -15,6 +15,7 @@ batch_size = 128
 num_classes = 10
 epochs = 500
 
+
 # input image dimensions
 img_rows, img_cols = 28, 28
 
@@ -48,7 +49,7 @@ print(x_test.shape[0], 'test samples')
 y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 
-# CNN is created also using Sequential model
+# CNN is created also using Sequential model.   There are 32 channels in the first convolutional layer, and 64 channels in the second convolutional layer.
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(5, 5),
                  activation='relu',

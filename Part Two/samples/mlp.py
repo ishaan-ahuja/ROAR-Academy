@@ -4,6 +4,7 @@
 ##
 ## (c) Copyright 2020. Intelligent Racing Inc. Not permitted for commercial use
 
+
 # Load dependencies
 from keras.models import Sequential
 from keras.layers import Dense
